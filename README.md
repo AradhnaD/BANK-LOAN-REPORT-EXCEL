@@ -1,9 +1,12 @@
-# BANK-LOAN-REPORT-EXCEL
+
 Bank Loan Report Dashboard | Excel
+
 An interactive Microsoft Excel dashboard designed to monitor loan
 portfolio performance, compare loan status groups, and highlight areas
 that may require further credit-risk investigation.
-Project Overview
+
+Project Overview 
+
 This project uses Excel to turn loan data into a visual dashboard for
 management-level portfolio monitoring. It summarizes loan applications,
 funded amounts, amounts received, interest rates, and borrowers'
@@ -11,6 +14,7 @@ debt-to-income ratios (DTI).
 The dashboard includes KPI cards, loan-status comparisons, monthly
 trends, and filters for exploring results by loan grade and loan
 purpose.
+
 Project Objectives
 •	Monitor total loan applications, funded amounts, and amounts
 received.
@@ -20,8 +24,13 @@ received.
 •	Display Month-to-Date (MTD) metrics and Month-over-Month (MoM)
 movement.
 •	Provide a concise, interactive view of portfolio performance.
+
+
 Key Performance Indicators
+
+
 KPI Reported Values -
+
 Total Loan Applications 38.6K
 Total Funded Amount $435.8M
 Total Amount Received $473.1M
@@ -34,13 +43,13 @@ MTD and MoM
 the current month through the latest available date.
 •	MoM (Month-over-Month): Measures the percentage change compared
 with the previous month.
+
 A common MoM calculation is:
 =(Current_Month-Previous_Month)/Previous_Month
-Format the result as a percentage. Handle blank or zero previous month
-values to avoid division errors.
+
+
 Dashboard Features
-•	Executive KPI cards: Applications, funded amount, amount
-received, average interest rate, and average DTI.
+•	Executive KPI cards: Applications, funded amount, amount received, average interest rate, and average DTI.
 •	Good Loan vs. Bad Loan comparison: Shows the share of
 applications in each group.
 •	Loan status analysis: Compares Fully Paid, Current, and Charged
@@ -52,10 +61,15 @@ borrowing purposes.
 •	Monthly trend: Displays movement over time.
 •	Interactive filters: Explore the dashboard by loan grade (A--G)
 and loan purpose.
+
+
 Data Description
+
 The dashboard summarizes loan records using these dimensions and
 measures.
+
 Dimensions -
+
 •	Loan status: Fully Paid, Current, Charged Off
 •	Loan grade: A to G
 •	Loan purpose: Examples include car, credit card, debt
@@ -67,8 +81,11 @@ Measures
 •	Average interest rate
 •	Average debt-to-income ratio (DTI)
 •	MTD and MoM indicators
+
 Data Cleaning and Transformation
+
 The project workflow includes the following checks and transformations:
+
 1.	Standardize loan status, grade, and purpose labels.
 2.	Check loan IDs for duplicate records.
 3.	Review missing or null values and document how they are handled.
@@ -76,15 +93,16 @@ The project workflow includes the following checks and transformations:
 5.	Calculate or summarize average interest rate and DTI.
 6.	Prepare MTD and MoM measures for trend monitoring.
 
-Example Excel formula for the loan-status group, assuming the source is
-an Excel Table:
+Excel formula 
+ loan-status group
+Excel Table:
 =IF(OR([@[loan_status]]="Fully Paid",[@[loan_status]]="Current"),
 "Good Loan",
-IF([@[loan_status]]="Charged Off","Bad Loan",""))
-This classification follows the project's stated grouping. Confirm that
-it matches the definitions required by the source dataset or business
-rules.
+IF([@[loan_status]]="Charged Off","Bad loan")
+
 Key Insights
+INSIGHTS
+
 1.	Good Loans account for approximately 86.18% of loan
 applications.
 2.	The portfolio contains 38,576 loan applications.
@@ -99,6 +117,7 @@ approximately 12.05% and an average DTI of 13.33%.
 Validation note: Claims comparing interest rate or DTI across
 individual loan status should be included only after confirming the
 status-level calculations in the source workbook.
+
 Tools and Skills
 •	Microsoft Excel
 •	Data cleaning and transformation
@@ -113,8 +132,10 @@ Intended Users
 •	Finance teams
 •	Business and operations teams
 •	Senior leadership
+
 The dashboard is intended as a portfolio-monitoring aid. It does not
 replace a formal credit-risk assessment or a complete economic analysis.
+
 How to Use
 1.	Download or clone this repository.
 2.	Open the Excel workbook (PROJECT.xlsx) in Microsoft Excel.
@@ -133,7 +154,9 @@ necessarily equivalent to a financial loss.
 source data.
 •	Confirm formulas, filter behavior, and all reported insights before
 using the dashboard for business decisions.
+
 Conclusion
+
 This project demonstrates the use of Excel for interactive reporting and
 exploratory loan portfolio analysis. It brings important metrics into
 one view, helps compare loan-status groups, and highlights questions
